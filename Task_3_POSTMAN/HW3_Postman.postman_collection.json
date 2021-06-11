@@ -1,0 +1,2751 @@
+{
+	"info": {
+		"_postman_id": "fa7aea1d-83ca-433a-b395-50e4aba8ac06",
+		"name": "HW3_Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Age_europe",
+			"item": [
+				{
+					"name": "Boundary Values",
+					"item": [
+						{
+							"name": "Positive 0-17",
+							"item": [
+								{
+									"name": "0",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"    pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "1",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"    pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "16",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "16",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "17",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "17",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Positive 18-49",
+							"item": [
+								{
+									"name": "18",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "18",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "19",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "19",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "48",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "48",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "49",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "49",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Positive 50-100",
+							"item": [
+								{
+									"name": "50",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "50",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "51",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "51",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "99",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "99",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "100",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "100",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative 0-17",
+							"item": [
+								{
+									"name": "-1",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 500\", function () {\r",
+													"    pm.response.to.have.status(500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "-1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "18",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "18",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative 18-49",
+							"item": [
+								{
+									"name": "17",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "17",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "50",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "50",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative 50-100",
+							"item": [
+								{
+									"name": "49",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "49",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "101",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 500\", function () {\r",
+													"    pm.response.to.have.status(500);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "101",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_europe",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_europe"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Equivalency Classes",
+					"item": [
+						{
+							"name": "Positive 0-17",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age type is 'underage'\", function () {\r",
+											"    var jsonData = pm.response.json().age_type;\r",
+											"pm.expect(jsonData).to.eql(\"underage\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age request = age response\", function () {\r",
+											"    var jsonData = pm.response.json().age;\r",
+											"   pm.expect(jsonData).to.eql(request.data.age);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "12",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_europe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_europe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Positive 18-49",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age type is 'adult'\", function () {\r",
+											"    var jsonData = pm.response.json().age_type;\r",
+											"pm.expect(jsonData).to.eql(\"adult\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age request = age response\", function () {\r",
+											"    var jsonData = pm.response.json().age;\r",
+											"   pm.expect(jsonData).to.eql(request.data.age);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "35",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_europe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_europe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Positive 50-100",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age type is 'antiquity'\", function () {\r",
+											"    var jsonData = pm.response.json().age_type;\r",
+											"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age request = age response\", function () {\r",
+											"    var jsonData = pm.response.json().age;\r",
+											"   pm.expect(jsonData).to.eql(request.data.age);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "75",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_europe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_europe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative  Letters",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_europe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_europe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative   Symbols Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "@",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_europe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_europe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative  -∞ - -1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "-15",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_europe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_europe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative  101 - +∞ Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "205",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_europe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_europe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative  Empty",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_europe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_europe"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Age_USA",
+			"item": [
+				{
+					"name": "Boundary Values",
+					"item": [
+						{
+							"name": "Positive 0-20",
+							"item": [
+								{
+									"name": "0",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "1",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "19",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "19",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "20",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "17",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Positive 21-49",
+							"item": [
+								{
+									"name": "21",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "21",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "22",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "22",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "48",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "48",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "49",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "49",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Positive 50-100",
+							"item": [
+								{
+									"name": "50",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "50",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "51",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "51",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "99",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "99",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "100",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age request = age response\", function () {\r",
+													"    var jsonData = pm.response.json().age;\r",
+													"   pm.expect(jsonData).to.eql(request.data.age);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "100",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative 0-17",
+							"item": [
+								{
+									"name": "-1",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 500\", function () {\r",
+													"    pm.response.to.have.status(500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "-1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "21",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "21",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative 20-49",
+							"item": [
+								{
+									"name": "19",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'underage'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"underage\")\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "19",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "50",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'antiquity'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "50",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Negative 50-100",
+							"item": [
+								{
+									"name": "49",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Age type is 'adult'\", function () {\r",
+													"    var jsonData = pm.response.json().age_type;\r",
+													"pm.expect(jsonData).to.eql(\"adult\")\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "49",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "101",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 500\", function () {\r",
+													"    pm.response.to.have.status(500);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "age",
+													"value": "101",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/age_usa",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"age_usa"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Equivalency Classes",
+					"item": [
+						{
+							"name": "Positive 0-20",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age type is 'underage'\", function () {\r",
+											"    var jsonData = pm.response.json().age_type;\r",
+											"pm.expect(jsonData).to.eql(\"underage\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age request = age response\", function () {\r",
+											"    var jsonData = pm.response.json().age;\r",
+											"   pm.expect(jsonData).to.eql(request.data.age);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "12",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_usa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_usa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Positive 20-49",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age type is 'adult'\", function () {\r",
+											"    var jsonData = pm.response.json().age_type;\r",
+											"pm.expect(jsonData).to.eql(\"adult\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age request = age response\", function () {\r",
+											"    var jsonData = pm.response.json().age;\r",
+											"   pm.expect(jsonData).to.eql(request.data.age);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "35",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_usa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_usa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Positive 50-100",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age type is 'antiquity'\", function () {\r",
+											"    var jsonData = pm.response.json().age_type;\r",
+											"pm.expect(jsonData).to.eql(\"antiquity\")\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Age request = age response\", function () {\r",
+											"    var jsonData = pm.response.json().age;\r",
+											"   pm.expect(jsonData).to.eql(request.data.age);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "75",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_usa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_usa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative  Letters",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_usa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_usa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative   Symbols Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "@",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_usa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_usa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative  -∞ - -1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "-15",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_usa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_usa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative  101 - +∞ Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "205",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_usa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_usa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Negative  Empty",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "age",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/age_usa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"age_usa"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
