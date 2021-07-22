@@ -1,0 +1,84 @@
+{
+	"id": "d65fe369-b6ff-4326-bf3b-1d90d90023df",
+	"name": "run CSV",
+	"timestamp": "2021-07-22T18:55:26.285Z",
+	"collection_id": "14852519-31e220f1-536d-44cb-8866-d2ba5473dc60",
+	"folder_id": 0,
+	"environment_id": "cd8b68ac-d6e9-487c-9a7f-109005bdc719",
+	"totalPass": 10,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "305f8a26-67d0-42ed-88ba-cf65c490ad77",
+			"name": "api/users",
+			"time": 124,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				147,
+				110,
+				109,
+				119,
+				115,
+				119,
+				125,
+				134,
+				154,
+				124
+			],
+			"allTests": [
+				{
+					"Status test": true
+				},
+				{
+					"Status test": true
+				},
+				{
+					"Status test": true
+				},
+				{
+					"Status test": true
+				},
+				{
+					"Status test": true
+				},
+				{
+					"Status test": true
+				},
+				{
+					"Status test": true
+				},
+				{
+					"Status test": true
+				},
+				{
+					"Status test": true
+				},
+				{
+					"Status test": true
+				}
+			]
+		}
+	],
+	"count": 10,
+	"totalTime": 1256,
+	"collection": {
+		"requests": [
+			{
+				"id": "305f8a26-67d0-42ed-88ba-cf65c490ad77",
+				"method": "POST"
+			}
+		]
+	}
+}
