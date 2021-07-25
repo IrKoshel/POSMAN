@@ -1,0 +1,26 @@
+[
+	{
+	    "name": "Jess",
+		"job": "staff_1"
+	},
+	{
+		"name": "Mary",
+		"job": "staff_2"
+	},
+	{
+		"name": "Geg",
+		"job": "staff_3"
+	},
+		{
+		"name": "Rick",
+		"job": "staff_4"
+	},
+		{
+		"name": "Serry",
+		"job": "staff_5"
+	},
+		{
+		"name": "Lue",
+		"job": "staff_6"
+	}
+]
