@@ -1,0 +1,79 @@
+{
+	"id": "52c5bfa7-28d9-4e41-a9b4-76c79d4c9d9a",
+	"name": "run CSV_JSON",
+	"timestamp": "2021-07-25T04:31:16.369Z",
+	"collection_id": "14852519-31e220f1-536d-44cb-8866-d2ba5473dc60",
+	"folder_id": 0,
+	"environment_id": "cd8b68ac-d6e9-487c-9a7f-109005bdc719",
+	"totalPass": 12,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b239dd38-d619-4a1b-b34f-a5439c5a7120",
+			"name": "api/users_JSON",
+			"time": 102,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status test": true,
+				"Id name": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 6,
+					"fail": 0
+				},
+				"Id name": {
+					"pass": 6,
+					"fail": 0
+				}
+			},
+			"times": [
+				125,
+				123,
+				107,
+				109,
+				110,
+				102
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Id name": true
+				},
+				{
+					"Status test": true,
+					"Id name": true
+				},
+				{
+					"Status test": true,
+					"Id name": true
+				},
+				{
+					"Status test": true,
+					"Id name": true
+				},
+				{
+					"Status test": true,
+					"Id name": true
+				},
+				{
+					"Status test": true,
+					"Id name": true
+				}
+			]
+		}
+	],
+	"count": 6,
+	"totalTime": 676,
+	"collection": {
+		"requests": [
+			{
+				"id": "b239dd38-d619-4a1b-b34f-a5439c5a7120",
+				"method": "POST"
+			}
+		]
+	}
+}
